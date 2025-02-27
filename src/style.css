@@ -30,12 +30,22 @@ h1 {
 }
 
 form {
+  display: flex;
+}
+
+.form-container {
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.626);
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
   border-radius: 10px;
-  display: flex;
   margin-bottom: 30px;
+}
+
+.hint {
+  line-height: 1.5;
+  margin-top: 5px;
+  opacity: 0.6;
+  font-size: 12px;
 }
 
 .instructions {
@@ -58,6 +68,11 @@ form {
   border-radius: 50px;
   padding: 14px 24px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #c7ae90; /* Color verde más oscuro */
 }
 
 .poem {
@@ -71,6 +86,25 @@ form {
 
 .poem strong {
   color: #eec8b7;
+}
+
+.hidden {
+  display: none;
+}
+
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
 
 footer {
