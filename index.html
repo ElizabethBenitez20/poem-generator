@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Spanish Poem Generator</title>
   </head>
@@ -12,7 +13,7 @@
         <h1>AI Spanish Poem Generator</h1>
       </header>
       <main>
-        <form>
+        <form id="poem-generator-form">
           <input
             type="text"
             placeholder="Enter the topic of the Spanish poem"
@@ -23,11 +24,7 @@
           />
           <input type="submit" class="submit-button" />
         </form>
-        <div class="poem">
-          Soy el amo de mi destino,
-          <br />
-          soy el capitán de mi alma
-        </div>
+        <div class="poem" id="poem"></div>
       </main>
 
       <footer>
