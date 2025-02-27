@@ -1,3 +1,16 @@
+function initGlowCursor() {
+  const cursor = document.createElement("div");
+  cursor.className = "glow-cursor";
+  document.body.appendChild(cursor);
+
+  document.addEventListener("mousemove", function (e) {
+    cursor.style.left = e.pageX + "px";
+    cursor.style.top = e.pageY + "px";
+  });
+}
+
+window.onload = initGlowCursor;
+
 function displayPoem(response) {
   new Typewriter("#poem", {
     strings: response.data.answer,

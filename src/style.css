@@ -4,6 +4,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Times New Roman", Times, serif;
+  cursor: default;
 }
 
 a {
@@ -111,4 +112,30 @@ footer {
   text-align: center;
   font-size: 13px;
   margin-top: 30px;
+}
+
+.glow-cursor {
+  position: fixed;
+  width: 20px; /* Tamaño más grande para un efecto más difuminado */
+  height: 20px;
+  background: rgba(250, 128, 114, 0.278); /* Color salmón claro */
+  border-radius: 50%;
+  pointer-events: none;
+  animation: cursorGlow 1.5s infinite;
+  transform: translate(-50%, -50%);
+}
+
+/* Animación de brillo */
+@keyframes cursorGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(250, 128, 114, 0.5),
+      0 0 40px rgba(250, 128, 114, 0.5); /* Sombra salmón */
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(250, 128, 114, 1), 0 0 60px rgba(250, 128, 114, 1); /* Sombra salmón más intensa */
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(250, 128, 114, 0.5),
+      0 0 40px rgba(250, 128, 114, 0.5); /* Sombra salmón */
+  }
 }
