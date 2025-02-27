@@ -57,6 +57,7 @@ form {
   font-size: 16px;
   border-radius: 50px;
   padding: 14px 24px;
+  cursor: pointer;
 }
 
 .poem {
@@ -66,6 +67,10 @@ form {
   line-height: 2;
   border-left: 3px solid #eec8b7;
   box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
+}
+
+.poem strong {
+  color: #eec8b7;
 }
 
 footer {
